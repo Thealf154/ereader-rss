@@ -1,0 +1,39 @@
+body {
+    height: 100vh; /* Make the body height 100% of the viewport height */
+    display: table; /* Enable table layout for centering */
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Make body width 100% of the viewport */
+    text-align: center; /* Center text horizontally */
+}
+
+
+.rss-form {
+    text-align: center;
+    display: table-cell; /* Enable table cell layout */
+    vertical-align: middle; /* Vertically center the form */
+    margin: 0 auto; /* Center the form horizontally */
+    text-align: center; /* Center text within the form */
+    width: 300px;
+}
+
+.form-item {
+    margin: 0;
+    margin-top: 1.2rem;
+}
+
+.form-item:first-child {
+    margin-top: 0;
+}
+
+#url {
+    padding: 0.5rem;
+    border: 1px solid rgb(144, 144, 144);
+    width: 75%;
+}
+
+#view-rss-button {
+    padding: 0.8rem;
+    background-color: rgb(220, 220, 220);
+    border: none;
+    width: 25%;
+}

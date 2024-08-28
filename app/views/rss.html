@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="data:,">
+    <title>{{.ItemTitle}}</title>
+  </head>
+  <body>
+    <div class="content-container">
+      <div class="content">
+        <div class="header">
+          <h1>{{.ItemTitle}}</h1>
+          <p class="header-item">
+            <span class="last-build-date">{{.RSSLastBuildDate}}</span>
+          </p>
+          <p class="header-item">
+            <a href="{{.ItemLink}}">{{.ItemHost}}</a>
+          </p>
+          <div class="bar strong"></div>
+        </div>
+        {{unescape .ItemDescription}}
+      </div>
+    </div>
+  </body>
+</html>

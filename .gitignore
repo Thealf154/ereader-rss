@@ -1,0 +1,10 @@
+__debug*
+.vscode
+*.xml
+.air.toml
+tmp
+node_modules
+public/js/*.js
+.env
+assets/*.xml
+*.epub

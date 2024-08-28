@@ -1,0 +1,32 @@
+services:
+  memcached:
+    image: memcached:latest
+    ports:
+      - "11211:11211"
+    restart: always
+    # Set memory to 128 mb and set index memory 64mb
+    # warning: index memory cant be >1/2 of memory
+    command: -I 64m -m 128m
+
+  rss-reader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rss-reader 
+    restart: always
+    environment:
+      - DEBUG=${DEBUG}
+      - MEMCACHE_HOST=${MEMCACHE_HOST}
+      - MEMCACHE_PORT=${MEMCACHE_PORT}
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - memcached
+    healthcheck:
+      test: "curl -s rss-ereader/health || exit 1"
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="data:," />
+    <title>{{.RSSTitle}}</title>
+  </head>
+  <body>
+    <div class="content-container">
+      <div class="content">
+        <div class="header">
+          <h1>{{.RSSTitle}}</h1>
+          <p class="header-item">
+            <span>{{.RSSLastBuildDate}}</span>
+          </p>
+          <p class="header-item">
+            <a href="{{.RSSLink}}">{{.RSSHost}}</a>
+          </p>
+          <p class="header-item">
+            <span>{{.RSSDescription}}</span>
+          </p>
+          <p class="header-item">
+            Takes a while to be ready, be patient:
+            <a href="{{.DownloadEpubLink}}" download="{{.RSSTitle}}"
+              >Download as Epub</a
+            >
+          </p>
+          <div class="bar strong"></div>
+        </div>
+        <p></p>
+        <ul class="list">
+          {{range .Items}}
+          <li class="item"><a href="{{.Link}}">{{.Title}}</a></li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

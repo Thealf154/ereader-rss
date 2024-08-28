@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="icon" href="data:,">
+    <title>Home</title>
+  </head>
+
+  <body>
+    <form action="/rss/list" method="get" class="rss-form">
+      <h1 class="home-title form-item">RSS Reader</h1>
+
+      <p class="form-item">Your RSS feed in a Kobo, Kindle, or any e-reader!</p>
+
+      <p class="form-item">
+        Contact me:
+        <a class="form-item" href="mailto:alfredo.vanegas.arcega.com"
+          >alfredo.vanegas.arcega@gmail.com</a
+        >
+      </p>
+
+      <input
+        type="text"
+        name="url"
+        id="url"
+        class="form-item"
+        placeholder="Type the rss url here"
+      />
+
+      <button type="submit" id="view-rss-button" class="form-item">
+        View RSS
+      </button>
+    </form>
+  </body>
+</html>
