@@ -72,7 +72,7 @@ func CompressImage(src string) (string, error) {
 	}
 
 	options := bimg.Options{
-		Quality: 50,
+		Quality: 30,
 	}
 
 	newImage, err := bimg.NewImage(*image).Process(options)
