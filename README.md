@@ -14,3 +14,4 @@ docker-compose up
 - No ads (can't be served in an ereader).
 - All pages are server rendered.
 - Legacy CSS so it can be supported in the ereaders experimental browsers.
+- Download entire feed as an EPUB.
