@@ -1,5 +1,7 @@
 # RSS Reader for ereaders
 
+Being able to read current things in a ereader is pretty difficult since many ereaders don't handle well modern sites. EreaderRSS lets you see your rss feeds in your ereader.
+
 ## Docker deploy
 
 Just run this command:
