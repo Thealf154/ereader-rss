@@ -129,13 +129,13 @@ func getRss(rssUrl string) (*rssparser.RSS, error) {
 		if err != nil {
 			return nil, err
 		}
-		setRssCache(rssUrl, urlData)
 
 		data, err := rssparser.ReadRSS(urlData)
 		if err != nil {
 			return nil, err
 		}
 
+		setRssCache(rssUrl, urlData)
 		return data, nil
 	}
 
