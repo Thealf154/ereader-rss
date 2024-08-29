@@ -22,7 +22,7 @@ func HandleError(ctx *fiber.Ctx, err error) error {
 
 	// Send custom error page
 	err = ctx.Status(code).Render("error", fiber.Map{
-		"Error": err,
+		"Error": fmt.Errorf("something wrong happened"),
 	})
 
 	if err != nil {
