@@ -231,7 +231,6 @@ func processRSSItem(item Item, rss *RSS, e *epub.Epub) (Page, error) {
 		return Page{}, err
 	}
 
-	log.Debug("page parsed: ", item.Title)
 	return Page{Title: item.Title, Body: &html}, nil
 }
 
@@ -248,10 +247,10 @@ func addTOCAndPages(e *epub.Epub, pages []Page, cssPath string) error {
 	e.AddSection(tocPage, "Table of Contents", "Table of Contents", cssPath)
 
 	for _, page := range pages {
+		log.Debugf("page added: %s", page.Title)
 		_, err := e.AddSection(*page.Body, page.Title, page.Title, cssPath)
 		if err != nil {
 			log.Error("error writing page: ", err)
-			return err
 		}
 	}
 	return nil
